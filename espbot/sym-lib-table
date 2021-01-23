@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name espcam)(type Legacy)(uri /home/user/PROJEKTE/kicadlib/espcam/espcam.lib)(options "")(descr ""))
+  (lib (name TP5400)(type Legacy)(uri /home/user/PROJEKTE/kicadlib/TP5400/TP5400.lib)(options "")(descr ""))
+)

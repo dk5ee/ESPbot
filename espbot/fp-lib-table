@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name espcam)(type KiCad)(uri /home/user/PROJEKTE/kicadlib/espcam/espcam.pretty)(options "")(descr ""))
+  (lib (name TP5400)(type KiCad)(uri /home/user/PROJEKTE/kicadlib/TP5400)(options "")(descr ""))
+)
