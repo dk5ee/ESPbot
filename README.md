@@ -26,6 +26,7 @@ The repository contains:
 * the inverters to save pins eliminate the possibility to do a motor brake
 
 ## Differences to C3-PR design
+
 * made with kicad instead of easyeda
 * instead of power from a USB powerbank this design uses a TP4500 power management chip
 * instead of the dual NPN transistor every transistor is the same mosfet
