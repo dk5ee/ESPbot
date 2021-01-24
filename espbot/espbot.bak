@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:espbot-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -13,17 +14,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L TP5400:TP5400 U2
-U 1 1 600C44C1
-P 1700 1250
-F 0 "U2" H 1675 1421 50  0000 C CNN
-F 1 "TP5400" H 1675 1328 50  0000 C CNN
-F 2 "TP5400:ESOP8-F.Cu-only" H 1700 1250 50  0001 C CNN
-F 3 "" H 1700 1250 50  0001 C CNN
-	1    1700 1250
-	1    0    0    -1  
-$EndComp
 Text GLabel 2150 1550 2    50   Input ~ 0
 bat
 Text GLabel 2150 1650 2    50   Input ~ 0
@@ -298,8 +288,6 @@ Wire Wire Line
 	1550 900  1650 900 
 Connection ~ 1550 900 
 Wire Wire Line
-	3050 1000 3000 1000
-Wire Wire Line
 	2650 1000 2650 1050
 Wire Wire Line
 	3000 1050 3000 1000
@@ -480,17 +468,6 @@ Text GLabel 10200 1700 2    50   Input ~ 0
 rts
 Text GLabel 10200 1900 2    50   Input ~ 0
 dtr
-$Comp
-L espcam:ESPCAM U1
-U 1 1 600E21C7
-P 2050 3350
-F 0 "U1" H 2050 3771 50  0000 C CNN
-F 1 "ESPCAM" H 2050 3678 50  0000 C CNN
-F 2 "espcam:ESPCAM_bottom" H 2050 3350 50  0001 C CNN
-F 3 "" H 2050 3350 50  0001 C CNN
-	1    2050 3350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7300 2100 7300 2150
 Wire Wire Line
@@ -1152,4 +1129,60 @@ Wire Notes Line
 	3650 4900 550  4900
 Text Notes 600  4800 0    50   ~ 0
 GPIO 33 is built in red led on esp32-cam
+Wire Wire Line
+	3000 1000 3100 1000
+Text GLabel 4550 1900 0    50   Input ~ 0
+bat
+$Comp
+L power:GND #PWR016
+U 1 1 601C2FE8
+P 4550 2150
+F 0 "#PWR016" H 4550 1900 50  0001 C CNN
+F 1 "GND" H 4555 1973 50  0000 C CNN
+F 2 "" H 4550 2150 50  0001 C CNN
+F 3 "" H 4550 2150 50  0001 C CNN
+	1    4550 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J6
+U 1 1 601C30EC
+P 4800 1950
+F 0 "J6" H 4880 1942 50  0000 L CNN
+F 1 "battery" H 4880 1849 50  0000 L CNN
+F 2 "" H 4800 1950 50  0001 C CNN
+F 3 "~" H 4800 1950 50  0001 C CNN
+	1    4800 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 1900 4550 1950
+Wire Wire Line
+	4550 1950 4600 1950
+Wire Wire Line
+	4600 2050 4550 2050
+Wire Wire Line
+	4550 2050 4550 2150
+$Comp
+L TP5400:TP5400 U1
+U 1 1 600E0ED6
+P 1700 1250
+F 0 "U1" H 1675 1421 50  0000 C CNN
+F 1 "TP5400" H 1675 1328 50  0000 C CNN
+F 2 "" H 1700 1250 50  0001 C CNN
+F 3 "" H 1700 1250 50  0001 C CNN
+	1    1700 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L espcam:ESPCAM U2
+U 1 1 600E11C9
+P 2050 3350
+F 0 "U2" H 2050 3771 50  0000 C CNN
+F 1 "ESPCAM" H 2050 3678 50  0000 C CNN
+F 2 "" H 2050 3350 50  0001 C CNN
+F 3 "" H 2050 3350 50  0001 C CNN
+	1    2050 3350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
