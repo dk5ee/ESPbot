@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:espbot-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -367,17 +366,6 @@ $EndComp
 Text GLabel 9600 900  2    50   Input ~ 0
 vcc
 $Comp
-L Connector:USB_B_Mini J3
-U 1 1 600CF507
-P 7400 1700
-F 0 "J3" H 7457 2170 50  0000 C CNN
-F 1 "USB_B_Mini" H 7457 2077 50  0000 C CNN
-F 2 "" H 7550 1650 50  0001 C CNN
-F 3 "~" H 7550 1650 50  0001 C CNN
-	1    7400 1700
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C8
 U 1 1 600CF5B2
 P 7800 1250
@@ -511,17 +499,6 @@ Wire Wire Line
 	2600 3550 2750 3550
 Wire Wire Line
 	2750 3650 2600 3650
-$Comp
-L Interface_USB:FT232RL U4
-U 1 1 600F945A
-P 9400 2200
-F 0 "U4" H 9400 3384 50  0000 C CNN
-F 1 "FT232RL" H 9400 3291 50  0000 C CNN
-F 2 "Package_SO:SSOP-28_5.3x10.2mm_P0.65mm" H 9400 2200 50  0001 C CNN
-F 3 "http://www.ftdichip.com/Products/ICs/FT232RL.htm" H 9400 2200 50  0001 C CNN
-	1    9400 2200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8250 2550 8250 2650
 Wire Wire Line
@@ -609,17 +586,6 @@ $EndComp
 Wire Wire Line
 	9200 3300 9200 3250
 Connection ~ 9200 3250
-$Comp
-L Driver_Motor:TB6612FNG U3
-U 1 1 6012F17F
-P 5000 4100
-F 0 "U3" H 5000 5284 50  0000 C CNN
-F 1 "TB6612FNG" H 5000 5191 50  0000 C CNN
-F 2 "Package_SO:SSOP-24_5.3x8.2mm_P0.65mm" H 5450 4700 50  0001 C CNN
-F 3 "https://toshiba.semicon-storage.com/us/product/linear/motordriver/detail.TB6612FNG.html" H 5450 4700 50  0001 C CNN
-	1    5000 4100
-	1    0    0    -1  
-$EndComp
 $Comp
 L Connector_Generic:Conn_01x02 J1
 U 1 1 6012F397
@@ -1158,28 +1124,61 @@ Wire Wire Line
 	4600 2050 4550 2050
 Wire Wire Line
 	4550 2050 4550 2150
-$Comp
-L TP5400:TP5400 U1
-U 1 1 600E0ED6
-P 1700 1250
-F 0 "U1" H 1675 1421 50  0000 C CNN
-F 1 "TP5400" H 1675 1328 50  0000 C CNN
-F 2 "" H 1700 1250 50  0001 C CNN
-F 3 "" H 1700 1250 50  0001 C CNN
-	1    1700 1250
-	1    0    0    -1  
-$EndComp
+Wire Wire Line
+	9100 5050 9100 6300
 $Comp
 L espcam:ESPCAM U2
-U 1 1 600E11C9
+U 1 1 600F46F8
 P 2050 3350
 F 0 "U2" H 2050 3771 50  0000 C CNN
 F 1 "ESPCAM" H 2050 3678 50  0000 C CNN
-F 2 "" H 2050 3350 50  0001 C CNN
+F 2 "espcam:ESPCAM_bottom" H 2050 3350 50  0001 C CNN
 F 3 "" H 2050 3350 50  0001 C CNN
 	1    2050 3350
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9100 5050 9100 6300
+$Comp
+L Driver_Motor:TB6612FNG U3
+U 1 1 600F6C8C
+P 5000 4100
+F 0 "U3" H 5000 3007 50  0000 C CNN
+F 1 "TB6612FNG" H 5000 2914 50  0000 C CNN
+F 2 "Package_SO:SSOP-24_5.3x8.2mm_P0.65mm" H 6300 3200 50  0001 C CNN
+F 3 "https://toshiba.semicon-storage.com/us/product/linear/motordriver/detail.TB6612FNG.html" H 5450 4700 50  0001 C CNN
+	1    5000 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Interface_USB:FT232RL U4
+U 1 1 600F9826
+P 9400 2200
+F 0 "U4" H 9400 3387 50  0000 C CNN
+F 1 "FT232RL" H 9400 3294 50  0000 C CNN
+F 2 "Package_SO:SSOP-28_5.3x10.2mm_P0.65mm" H 10500 1300 50  0001 C CNN
+F 3 "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT232R.pdf" H 9400 2200 50  0001 C CNN
+	1    9400 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B_Mini J3
+U 1 1 600FAE66
+P 7400 1700
+F 0 "J3" H 7458 2170 50  0000 C CNN
+F 1 "USB_B_Mini" H 7458 2077 50  0000 C CNN
+F 2 "" H 7550 1650 50  0001 C CNN
+F 3 "~" H 7550 1650 50  0001 C CNN
+	1    7400 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L TP5400:TP5400 U1
+U 1 1 600FD13D
+P 1700 1250
+F 0 "U1" H 1675 1421 50  0000 C CNN
+F 1 "TP5400" H 1675 1328 50  0000 C CNN
+F 2 "TP5400:ESOP8-F.Cu-only" H 1700 1250 50  0001 C CNN
+F 3 "" H 1700 1250 50  0001 C CNN
+	1    1700 1250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

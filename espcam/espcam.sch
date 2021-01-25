@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:espcam-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -14,17 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L espcam:ESPCAM U1
-U 1 1 600C0337
-P 5700 3400
-F 0 "U1" H 5700 3500 50  0000 C CNN
-F 1 "ESPCAM" H 5700 3400 50  0000 C CNN
-F 2 "espcam:ESPCAM_bottom" H 5700 3400 50  0001 C CNN
-F 3 "" H 5700 3400 50  0001 C CNN
-	1    5700 3400
-	1    0    0    -1  
-$EndComp
 $Comp
 L Connector_Generic:Conn_01x08 J1
 U 1 1 600C0C13
@@ -188,4 +176,15 @@ Wire Wire Line
 Connection ~ 5700 4400
 Wire Wire Line
 	5700 4400 6400 4400
+$Comp
+L espcam:ESPCAM U1
+U 1 1 600F913F
+P 5700 3400
+F 0 "U1" H 5700 3821 50  0000 C CNN
+F 1 "ESPCAM" H 5700 3728 50  0000 C CNN
+F 2 "espcam:ESPCAM_bottom" H 5700 3400 50  0001 C CNN
+F 3 "" H 5700 3400 50  0001 C CNN
+	1    5700 3400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

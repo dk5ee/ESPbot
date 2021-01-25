@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:TP5400-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -14,17 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L TP5400:TP5400 U1
-U 1 1 600C7C10
-P 4750 2700
-F 0 "U1" H 4725 2871 50  0000 C CNN
-F 1 "TP5400" H 4725 2778 50  0000 C CNN
-F 2 "TP5400:ESOP8-F.Cu-only" H 4750 2700 50  0001 C CNN
-F 3 "" H 4750 2700 50  0001 C CNN
-	1    4750 2700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5200 2900 5400 2900
 Wire Wire Line
@@ -451,4 +439,15 @@ Text Notes 3300 4800 0    50   ~ 0
 Schaltung aus dem chinesischem Datenblatt\n\nR3 bestimmt den maximalen ladestrom\n10k  - 130mA\n5k - 245 mA\n2k - 560 mA\n1k5 - 740 mA\n1k1 - 1000 mA\nR3 ist circa 1100 durch Ladestrom
 Text Notes 7150 6800 0    50   ~ 0
 NanJing Top Power ASIC Corp. TP5400
+$Comp
+L TP5400:TP5400 U1
+U 1 1 600F75AF
+P 4750 2700
+F 0 "U1" H 4725 2871 50  0000 C CNN
+F 1 "TP5400" H 4725 2778 50  0000 C CNN
+F 2 "TP5400:ESOP8-F.Cu-only" H 4750 2700 50  0001 C CNN
+F 3 "" H 4750 2700 50  0001 C CNN
+	1    4750 2700
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
