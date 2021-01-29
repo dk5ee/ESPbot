@@ -40,7 +40,6 @@ A-\nA+\nVCC\nGND\nB-\nB+
 NoConn ~ 4250 2150
 Text Notes 4050 2200 0    50   ~ 0
 LED
-NoConn ~ 5350 2850
 $Comp
 L Connector_Generic:Conn_01x03 J3
 U 1 1 6011E2A5
@@ -52,12 +51,8 @@ F 3 "~" H 5750 2250 50  0001 C CNN
 	1    5750 2250
 	1    0    0    -1  
 $EndComp
-Text Notes 5400 2700 0    50   ~ 0
-boot
 Text Notes 3850 2300 0    50   ~ 0
 free pin 1
-Text Notes 5400 2800 0    50   ~ 0
-free pin 2
 $Comp
 L Connector_Generic:Conn_01x02 J2
 U 1 1 601226F6
@@ -69,7 +64,6 @@ F 3 "~" H 5300 3250 50  0001 C CNN
 	1    5300 3250
 	1    0    0    -1  
 $EndComp
-NoConn ~ 5350 2450
 Wire Wire Line
 	5350 2150 5450 2150
 Wire Wire Line
@@ -102,28 +96,14 @@ Wire Wire Line
 	3650 2700 3650 2650
 Wire Wire Line
 	3650 2650 3150 2650
-Wire Wire Line
-	5350 2550 5450 2550
-Wire Wire Line
-	5450 2550 5450 2150
 Connection ~ 5450 2150
 Wire Wire Line
 	5450 2150 5550 2150
 Wire Wire Line
 	5350 2250 5550 2250
 Wire Wire Line
-	4150 2850 4150 3250
-Connection ~ 4150 2850
-Wire Wire Line
 	5100 3350 5050 3350
-Wire Wire Line
-	5050 3350 5050 3050
-Wire Wire Line
-	5050 3050 5450 3050
-Wire Wire Line
-	5450 3050 5450 2550
 Connection ~ 5050 3350
-Connection ~ 5450 2550
 $Comp
 L Connector_Generic:Conn_01x02 J4
 U 1 1 601276AB
@@ -135,23 +115,8 @@ F 3 "~" H 6100 2550 50  0001 C CNN
 	1    6100 2550
 	1    0    0    -1  
 $EndComp
-$Comp
-L Switch:SW_SPST SW1
-U 1 1 60127D8B
-P 4600 3250
-F 0 "SW1" H 4600 3491 50  0000 C CNN
-F 1 "powerswitch" H 4600 3398 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4600 3250 50  0001 C CNN
-F 3 "~" H 4600 3250 50  0001 C CNN
-	1    4600 3250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4800 3250 5100 3250
-Wire Wire Line
-	4150 3250 4400 3250
-Wire Wire Line
-	5450 2550 5900 2550
 Wire Wire Line
 	5350 2650 5900 2650
 Wire Wire Line
@@ -178,8 +143,139 @@ Wire Wire Line
 Wire Wire Line
 	4000 2700 3650 2700
 Wire Wire Line
-	5050 3350 4000 3350
+	5050 3350 4400 3350
 Wire Wire Line
 	4000 3350 4000 2750
 Connection ~ 4000 2750
+Text GLabel 5350 2450 2    50   Input ~ 0
+pout
+Text GLabel 5350 2850 2    50   Input ~ 0
+3V3
+Text GLabel 3050 1150 0    50   Input ~ 0
+3V3
+Text GLabel 3700 1150 2    50   Input ~ 0
+pout
+$Comp
+L Device:CP1_Small C1
+U 1 1 601450CA
+P 4400 3200
+F 0 "C1" H 4491 3247 50  0000 L CNN
+F 1 "100u" H 4491 3154 50  0000 L CNN
+F 2 "" H 4400 3200 50  0001 C CNN
+F 3 "~" H 4400 3200 50  0001 C CNN
+	1    4400 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 2850 4150 3050
+Wire Wire Line
+	4150 3050 4400 3050
+Wire Wire Line
+	4800 3050 4800 3250
+Connection ~ 4150 2850
+$Comp
+L power:GND #PWR02
+U 1 1 60145EAD
+P 5600 1850
+F 0 "#PWR02" H 5600 1600 50  0001 C CNN
+F 1 "GND" H 5605 1673 50  0000 C CNN
+F 2 "" H 5600 1850 50  0001 C CNN
+F 3 "" H 5600 1850 50  0001 C CNN
+	1    5600 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 2150 5450 1800
+Wire Wire Line
+	5450 1800 5600 1800
+Wire Wire Line
+	5600 1800 5600 1850
+$Comp
+L power:GND #PWR03
+U 1 1 60146AF7
+P 5850 2800
+F 0 "#PWR03" H 5850 2550 50  0001 C CNN
+F 1 "GND" H 5855 2623 50  0000 C CNN
+F 2 "" H 5850 2800 50  0001 C CNN
+F 3 "" H 5850 2800 50  0001 C CNN
+	1    5850 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 2800 5850 2550
+Connection ~ 5850 2550
+Wire Wire Line
+	5850 2550 5900 2550
+Wire Wire Line
+	5350 2550 5850 2550
+Wire Wire Line
+	4400 3100 4400 3050
+Connection ~ 4400 3050
+Wire Wire Line
+	4400 3050 4800 3050
+Wire Wire Line
+	4400 3300 4400 3350
+Connection ~ 4400 3350
+Wire Wire Line
+	4400 3350 4000 3350
+$Comp
+L power:GND #PWR04
+U 1 1 601489D6
+P 3350 1500
+F 0 "#PWR04" H 3350 1250 50  0001 C CNN
+F 1 "GND" H 3355 1323 50  0000 C CNN
+F 2 "" H 3350 1500 50  0001 C CNN
+F 3 "" H 3350 1500 50  0001 C CNN
+	1    3350 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 6014A96E
+P 3200 1300
+F 0 "C2" H 3292 1347 50  0000 L CNN
+F 1 "100nF" H 3292 1254 50  0000 L CNN
+F 2 "" H 3200 1300 50  0001 C CNN
+F 3 "~" H 3200 1300 50  0001 C CNN
+	1    3200 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 6014AC67
+P 3600 1300
+F 0 "C3" H 3692 1347 50  0000 L CNN
+F 1 "100nF" H 3692 1254 50  0000 L CNN
+F 2 "" H 3600 1300 50  0001 C CNN
+F 3 "~" H 3600 1300 50  0001 C CNN
+	1    3600 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 1150 3600 1150
+Wire Wire Line
+	3600 1150 3600 1200
+Wire Wire Line
+	3050 1150 3200 1150
+Wire Wire Line
+	3200 1150 3200 1200
+Wire Wire Line
+	3200 1400 3200 1450
+Wire Wire Line
+	3200 1450 3350 1450
+Wire Wire Line
+	3600 1450 3600 1400
+Wire Wire Line
+	3350 1500 3350 1450
+Connection ~ 3350 1450
+Wire Wire Line
+	3350 1450 3600 1450
+Text Notes 5400 2700 0    50   ~ 0
+boot
+Text Notes 5400 2800 0    50   ~ 0
+free pin 2
+Text Notes 4350 1350 0    50   ~ 0
+without the 100nF capacitors the ESP32 voltage\nis unstable and the camera will generate artifacts.\nwithout the 100µF capacitor activating the motors\nwill freeze the ESP32
+Text Notes 6000 2350 0    50   ~ 0
+black\nwhite\ngreen
 $EndSCHEMATC
